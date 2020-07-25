@@ -7,6 +7,8 @@ env:
     - TEST_DISTRO: centos:7
     - TEST_DISTRO: centos:8
     - TEST_DISTRO: amazonlinux:2
+    - TEST_DISTRO: fedora:31
+    - TEST_DISTRO: fedora:32
     - TEST_DISTRO: debian:8
     - TEST_DISTRO: debian:9
     - TEST_DISTRO: debian:10

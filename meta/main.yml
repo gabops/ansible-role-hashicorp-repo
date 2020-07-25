@@ -13,6 +13,10 @@ galaxy_info:
     - name: Amazon Linux 2
       versions:
         - any
+    - name: Fedora
+      versions:
+        - 31
+        - 32
     - name: Debian
       versions:
         - jessie
