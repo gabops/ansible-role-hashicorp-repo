@@ -1,0 +1,8 @@
+---
+hashicorp_repo_stable_state: present
+
+hashicorp_repo_stable_enabled: true
+
+hashicorp_repo_test_state: absent
+
+hashicorp_repo_test_enabled: false

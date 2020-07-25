@@ -1,0 +1,4 @@
+---
+hashicorp_repo_key: https://rpm.releases.hashicorp.com/gpg
+
+hashicorp_repo_base_url: https://rpm.releases.hashicorp.com/{{ hashicorp_repo_release_names[ansible_distribution] }}/$releasever/$basearch

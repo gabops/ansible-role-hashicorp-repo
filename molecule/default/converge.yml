@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    hashicorp_repo_test_state: present
+    hashicorp_repo_test_enabled: true
+  tasks:
+    - name: "Include role"
+      include_role:
+        name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"

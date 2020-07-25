@@ -1,0 +1,5 @@
+---
+hashicorp_repo_release_names:
+  Amazon: AmazonLinux
+  CentOS: RHEL
+  Fedora: fedora

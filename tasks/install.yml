@@ -1,0 +1,35 @@
+---
+- block:
+    - name: Install Hashicorp repository stable (RedHat)
+      yum_repository:
+        baseurl: "{{ hashicorp_repo_base_url }}/stable"
+        description: Hashicorp Stable - $basearch
+        enabled: "{{ hashicorp_repo_stable_enabled }}"
+        gpgcheck: true
+        gpgkey: "{{ hashicorp_repo_key }}"
+        name: hashicorp
+        state: "{{ hashicorp_repo_stable_state }}"
+
+    - name: Install Hashicorp repository test (RedHat)
+      yum_repository:
+        baseurl: "{{ hashicorp_repo_base_url }}/test"
+        description: Hashicorp Stable - $basearch
+        enabled: "{{ hashicorp_repo_stable_enabled }}"
+        gpgcheck: true
+        gpgkey: "{{ hashicorp_repo_key }}"
+        name: hashicorp-test
+        state: "{{ hashicorp_repo_stable_state }}"
+  when: ansible_os_family == "RedHat"
+
+- block:
+    - name: Install Hashicorp repository key (Debian)
+      apt_key:
+        state: "{{ hashicorp_repo_stable_state }}"
+        url: "{{ hashicorp_repo_key }}"
+
+    - name: Install Hashicorp repository (Debian)
+      apt_repository:
+        filename: hashicorp
+        repo: deb https://apt.releases.hashicorp.com {{ ansible_distribution_release | lower }} main
+        state: "{{ hashicorp_repo_stable_state }}"
+  when: ansible_os_family == "Debian"
