@@ -39,4 +39,4 @@ jobs:
       - name: Test with molecule
         run: molecule test --all
         env:
-          TEST_DISTRO: ${{ matrix.molecule_distro }}
+          TEST_DISTRO: ${{ matrix.test_distro }}
