@@ -20,7 +20,6 @@ jobs:
           - amazonlinux:2
           - fedora:31
           - fedora:32
-          - debian:8
           - debian:9
           - debian:10
           - ubuntu:16.04
