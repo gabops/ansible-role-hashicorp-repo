@@ -15,11 +15,10 @@ galaxy_info:
         - any
     - name: Fedora
       versions:
-        - 31
-        - 32
+        - 33
+        - 34
     - name: Debian
       versions:
-        - jessie
         - stretch
         - buster
     - name: Ubuntu
